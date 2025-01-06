@@ -1,0 +1,14 @@
+@media print {
+  .print-heading {
+    page-break-after: avoid; /* This will avoid breaking right after the heading */
+    page-break-inside: avoid; /* This will avoid breaking inside the heading if it's wrapped */
+  }
+  .print-content {
+    page-break-inside: avoid; /* This avoids breaking inside your content div */
+  }
+  p {
+    page-break-inside: avoid; /* This will try to keep the paragraphs together */
+    orphans: 3; /* Ensures there are at least 3 lines at the bottom of a page */
+    widows: 3; /* Ensures there are at least 3 lines at the top of a page */
+  }
+}
